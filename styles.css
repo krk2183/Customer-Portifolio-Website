@@ -1,0 +1,401 @@
+@font-face {
+  font-family: 'Biheastra';
+  src: url('fonts/Biheastra.otf') format('opentype'),
+       url('fonts/Biheastra.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+        body {
+            font-family: 'Times New Roman', serif;
+            background-color: #1a1a1a;
+            color: #f5f5f5;
+            overflow-x: hidden;
+        }
+        .container-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .logo {
+            display: flex;
+            justify-items: center;
+            color: #FAF9F6;
+            font-size: 50px;
+            font-family:'Times New Roman', Times, serif;
+        }
+        .parallax-text {
+            transform: translateY(0);
+            transition: transform 0s linear;
+        }
+        .content-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 8rem;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .content-section.visible {
+            opacity: 1;
+        }
+        @media (min-width: 768px) {
+            .content-section {
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 4rem;
+            }
+            .content-section.reverse {
+                flex-direction: row-reverse;
+            }
+        }
+        /* Custom CSS for the bottom progress/navigation bar */
+        .bottom-nav {
+            position: fixed;       /* stay fixed relative to the viewport */
+            bottom: 0.1rem;          /* distance from the bottom of the user's screen */
+            right: 0.1rem;           /* distance from the right */
+            transform: none;       /* remove any centering transform */
+            z-index: 1000;
+            background-color: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 70% 0 0 70%;
+            padding: 4rem 1.6rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            box-shadow: 0 10px 50px rgba(255, 255, 255, 0.1), 0 2px 50px rgba(255, 255, 255, 0.08);
+
+            opacity: 1;
+            visibility: visible;
+        }
+        .bottom-nav.show-nav {
+            opacity: 1;
+            visibility: visible;
+        }
+        .bottom-nav-link {
+            font-size: 0.7rem;
+            color: #d4d4d4;
+            transition: color 0.3s ease;
+            position: relative;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        .bottom-nav-link.active {
+            color: #4ade80;
+        }
+        .bottom-nav-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 100%;
+            height: 2px;
+            background-color: transparent;
+            transition: background-color 0.3s ease;
+        }
+        .bottom-nav-link.active::after {
+            background-color: #4ade80;
+        }
+
+        /* Loading Screen Styles */
+        #loading-screen {
+            position: fixed;
+            inset: 0;
+            background-color: #1a1a1a;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        #loading-screen.hidden-loading {
+            opacity: 0;
+            transform: scale(1.1);
+        }
+        #countdown-number {
+            font-family: monospace;
+            font-size: 10rem;
+            color: #FAF9F6;
+            text-shadow: 0 0 10px #FAF9F6;
+        }
+        .main-content {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        .main-content.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .loading-text {
+            color: #FAF9F6;
+            margin-top: 1rem;
+            font-size: 1.5rem;
+        }
+
+        /* Countdown Timer Overlays */
+        .film-box {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(rgba(255, 255, 255, 0.2), rgba(117, 117, 117, 0.2));
+            overflow: hidden;
+        }
+        .film-box:before,
+        .film-box:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 100%;
+            height: 5px;
+            background: #000;
+        }
+        .film-box:after {
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 5px;
+            height: 100%;
+            background: #000;
+        }
+        .circle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 500px;
+            border: 5px solid #fff;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .circle.circle2 {
+            width: 600px;
+            height: 600px;
+        }
+        .niddle {
+            position: absolute;
+            top: calc(50% - 2px);
+            left: 50%;
+            height: 4px;
+            width: 1200px;
+            background: #000;
+            animation: animate 1s linear infinite;
+            transform-origin: left;
+        }
+        @keyframes animate {
+            0% {
+                transform: rotateZ(-90deg);
+            }
+            100% {
+                transform: rotateZ(270deg);
+            }
+        }
+        .vintage-button {
+            padding: 0.6rem 1.5rem;
+            background-color: transparent;
+            border: 2px solid #fff;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-family: monospace;
+            letter-spacing: 4px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            position: absolute;
+            bottom: 2rem;
+            left: 2rem;
+            margin: 0;
+        }
+        .vintage-button:hover {
+            background-color: #fff;
+            color: #1a1a1a;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+        }
+
+        /* Hero Image CSS */
+        #hero-image-container {
+            background-image: url('hero-img.jpg');
+            background-size: cover;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            min-height: 400px;
+        }
+
+        /* New parallax text items */
+        .parallax-item {
+            position: absolute;
+            will-change: transform;
+            opacity: 0.1;
+            font-size: 2rem;
+            white-space: nowrap;
+            letter-spacing: 0.2rem;
+            user-select: none;
+            pointer-events: none;
+            color: #f5f5f5;
+        }
+
+        #item-1 { top: 10vh; left: 10vw; }
+        #item-2 { top: 25vh; right: 15vw; }
+        #item-3 { top: 40vh; left: 20vw; }
+        #item-4 { top: 55vh; right: 25vw; }
+        #item-5 { top: 70vh; left: 30vw; }
+        #item-6 { top: 85vh; right: 35vw; }
+
+        /* The main hero container for the new design */
+        #hero-container {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* The central "User Name" element */
+        #main-name {
+            font-size: 6rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5rem;
+            will-change: transform, opacity;
+            transition: transform 0s linear, opacity 0.5s ease;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Biheastra&display=swap');
+
+        #artistic-section {
+            transition: background-color 1s ease;
+            background-color: transparent;
+        }
+        
+        #main-content a {
+            pointer-events: all;
+        }
+        #more-than-a {
+            font-family: 'Biheastra', serif;
+            font-size: 22px !important;
+            color: #2c2c2c;
+            position: relative;
+            transform-origin: center top; /* scales from top */
+            transition: transform 0.3s ease, font-size 0.3s ease;
+            white-space: nowrap;
+            z-index: 10;
+            text-align: center;
+        }
+
+        section {
+            padding-bottom: 10rem;
+            padding-top: 10rem;
+            display: block;
+        }
+
+        /* Parallax illusion */
+        #artistic-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            /* background: radial-gradient(circle, rgba(245,245,220,0.5), transparent 70%); */
+            transform: translateY(0);
+            transition: transform 0.5s ease-out;
+        }
+            #artistic-section {
+                height: 250vh;          /* tall enough to allow zooming effect */
+                display: flex;
+                justify-content: center;
+                align-items: flex-start; /* start from the top */
+                padding-top: 5rem; 
+                padding-bottom: 30rem;    /* large gap above text */
+                background-color: #001433;
+                overflow: visible;      /* allow text to grow outside if needed */
+                position: relative;
+            }
+
+            #more-than-a {
+                font-family: 'Biheastra', serif;
+                font-size: 4rem;        /* small initial size */
+                color: white;
+                text-align: center;
+                position: relative;
+                z-index: 10;
+                line-height: 1;
+                transform-origin: center top; /* scales from the top */
+                transition: transform 0.3s ease, font-size 0.3s ease;
+                white-space: nowrap;    /* prevents wrapping that can break layout */
+            }
+
+            /* Skills section */
+            #skills-section {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                overflow: visible;
+                margin-bottom: 15rem;
+                height: auto;
+            }
+
+            .skill-box {
+                box-sizing: border-box;
+                flex: 1 1 auto;
+                padding: 2rem 9rem;
+                background: #18181b;
+                border-bottom: 1px solid #27272a;
+                color: #fff;
+                font-size: 2rem;
+                font-weight: bold;
+                text-align: left;
+                transition: all 0.5s ease;
+                cursor: pointer;
+                position: relative;
+                overflow: hidden; /* This is important to hide the overflowing text initially */
+            }
+
+            .skill-box:hover {
+                background: #27272a;
+                font-size: 3rem;
+                padding-left: 3rem;
+            }
+
+            .skill-box .skill-details {
+                display: block; /* Ensures the div takes up space */
+                font-size: 1rem;
+                font-weight: normal;
+                margin-top: 0.5rem;
+                opacity: 0;
+                max-height: 0; /* Hides the content by collapsing its height */
+                overflow: hidden;
+                transition: all 0.5s ease;
+            }
+
+            .skill-box:hover .skill-details {
+                opacity: 1;
+                max-height: 200px; /* Expands the content on hover */
+            }
+
+            .my-skills {
+                text-align: center;
+                font-size: 6rem;
+                font-weight: bold;
+                margin-bottom: 8rem;
+                color: white;
+                font-family: 'Biheastra', serif;
+            }
+
+            .my-projects{
+                text-align: center;
+                font-size: 6rem;
+                font-weight: bold;
+
+                margin-bottom: 8rem;
+                color: white;
+                font-family: 'Biheastra', serif;
+            }

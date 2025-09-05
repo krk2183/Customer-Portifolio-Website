@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wiedemann-Inspired Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Biheastra font -->
+
+</head>
+<body class="bg-zinc-900 text-gray-100 font-sans">
+
+  <div id="loading-screen">
+    <div class="film-box">
+      <div class="circle circle1"></div>
+      <div class="circle circle2"></div>
+      <div class="niddle"></div>
+    </div>
+    <h1 id="countdown-number">3</h1>
+    <button id="skip-button" class="vintage-button">Skip</button>
+  </div>
+  
+  <div id="main-content" class="main-content">
+    <header class="fixed top-0 left-0 w-full p-6 z-10">
+      <nav class="flex justify-between items-center container-content">
+        <a href="#" class="logo">T.A.</a>
+        <div class="space-x-4 uppercase text-sm">
+          <a href="#skills-section" class="hover:text-gray-400">Skills</a>
+          <a href="#project-1" class="hover:text-gray-400">Work</a>
+          <a href="#intro" class="hover:text-gray-400">About</a>
+          <a href="#contact-me" class="hover:text-gray-400">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <div id="hero-container">
+      <h1 id="main-name">Tofiq Ahmadzada</h1>
+      <div class="parallax-item" id="item-1">Programming</div>
+      <div class="parallax-item" id="item-2">Translation</div>
+      <div class="parallax-item" id="item-3">Video Editing</div>
+      <div class="parallax-item" id="item-4">Graphic Design</div>
+      <div class="parallax-item" id="item-5">Team Work</div>
+      <div class="parallax-item" id="item-6">Customer Satisfaction</div>
+    </div>
+
+    <section id="intro" class="h-[80vh] flex items-center justify-start p-4 md:p-8 relative overflow-hidden">
+      <div class="container-content flex items-center justify-start flex-col md:flex-row w-full">
+        <h1 id="hero-text" class="minmal parallax-text text-5xl md:text-9xl font-black uppercase tracking-tight leading-none text-zinc-400 md:text-left md:w-1/2">
+          Minimalist <br> Design
+        </h1>
+        <div id="hero-image-container" class="w-full md:w-1/2 p-4 mt-8 md:mt-0 rounded-lg shadow-2xl"></div>
+      </div>
+    </section>
+
+    <!-- Artistic Section -->
+
+
+    <!-- Skills Section -->
+
+
+    <section id="skills-section">
+    <div class="my-skills">
+        My Tech Stack
+    </div>
+    <button class="skill-box" aria-expanded="false">
+        Front-End
+        <div class="skill-details">
+            <h3>Front-End Development</h3>
+            <p>I specialize in building modern, responsive user interfaces using **React.js** for dynamic applications and **TailwindCSS** for rapid, utility-first styling. I ensure all my UIs are accessible and provide a smooth user experience across all devices.</p>
+        </div>
+    </button>
+    <button class="skill-box" aria-expanded="false">
+        Back-End
+        <div class="skill-details">
+            <h3>Back-End Development</h3>
+            <p>My back-end expertise lies in creating robust and scalable **REST APIs** with **Node.js** and the **Express.js** framework. I have experience with database integration and designing server-side logic to power web applications.</p>
+        </div>
+    </button>
+    <button class="skill-box" aria-expanded="false">
+        MERN Stack
+        <div class="skill-details">
+            <h3>MERN Stack</h3>
+            <p>I'm proficient in the **MERN stack**, which combines the power of **MongoDB**, **Express.js**, **React**, and **Node.js** to build fast and efficient full-stack web applications. This allows me to handle both the front and back end of a project seamlessly.</p>
+        </div>
+    </button>
+    <button class="skill-box" aria-expanded="false">
+        Design
+        <div class="skill-details">
+            <h3>Design</h3>
+            <p>My design philosophy is rooted in **minimalism** and functionality. I create clean **UI/UX** designs that focus on a smooth and intuitive user journey, ensuring every interaction feels purposeful and natural.</p>
+        </div>
+    </button>
+
+    </section>
+        
+    <section id="artistic-section" class="h-screen flex items-center justify-center relative overflow-hidden">
+      <h1 id="more-than-a" class=" font-bold">More than a programmer</h1>
+    </section>
+
+    <main class="container-content">
+      <div class="my-projects">
+        My Projects
+      </div>
+      <section id="project-1" class="content-section">
+        <div class="md:w-1/2 p-4">
+          <img src="https://img.youtube.com/vi/F0QRPdpv79U/maxresdefault.jpg" alt="Youtube video" class="rounded-lg shadow-lg">
+        </div>
+        <div class="md:w-1/2 p-4 mt-8 md:mt-0">
+          <h2 class="text-3xl md:text-5xl font-bold mb-4"><a href="https://youtu.be/F0QRPdpv79U?si=K-Wa4leqFB737rXW">Istanbul</a></h2>
+          <p class="text-gray-400 leading-relaxed">
+            This video showcases the stunning cityscapes and everyday beauty of Istanbul — a place where history and modern life meet.
+          </p>
+        </div>
+      </section>
+
+      <section id="project-2" class="content-section reverse">
+        <div class="md:w-1/2 p-4">
+          <img src="https://img.youtube.com/vi/mx6IivHxnOg/maxresdefault.jpg" alt="Placeholder image for Project 2" class="rounded-lg shadow-lg">
+        </div>
+        <div class="md:w-1/2 p-4 mt-8 md:mt-0">
+          <h2 class="text-3xl md:text-5xl font-bold mb-4"><a href="https://youtu.be/mx6IivHxnOg?si=IX9BqQaEKPpT5qMX">Daş Dəmir Paşa</a></h2>
+          <p class="text-gray-400 leading-relaxed">
+            Documentary project telling the real story of a First Lieutenant and Karabakh warrior.
+          </p>
+        </div>
+      </section>
+
+      <section id="project-3" class="content-section">
+        <div class="md:w-1/2 p-4">
+          <img src="https://img.youtube.com/vi/PC4_ZI6qqz8/maxresdefault.jpg" alt="Placeholder image for Project 3" class="rounded-lg shadow-lg">
+        </div>
+        <div class="md:w-1/2 p-4 mt-8 md:mt-0">
+          <h2 class="text-3xl md:text-5xl font-bold mb-4"><a href="https://youtu.be/PC4_ZI6qqz8?si=GqltoHSMEf-449C8">Military Throphy Park</a></h2>
+          <p class="text-gray-400 leading-relaxed">
+            A short tour through Military Trophy Park in Baku, Azerbaijan.
+          </p>
+        </div>
+      </section>
+
+      <section id="project-4" class="content-section reverse">
+        <div class="md:w-1/2 p-4">
+          <img src="https://img.youtube.com/vi/IsK6uuP_61w/maxresdefault.jpg" alt="Placeholder image for Project 4" class="rounded-lg shadow-lg">
+        </div>
+        <div class="md:w-1/2 p-4 mt-8 md:mt-0">
+          <h2 class="text-3xl md:text-5xl font-bold mb-4"><a href="https://youtu.be/IsK6uuP_61w?si=Lr8Gt-09RGe36Jd4">On the Shore of the Caspian</a></h2>
+          <p class="text-gray-400 leading-relaxed">
+            Took part in the production of this project “Xəzərin Sahilində” as a video editor, collaborating closely with the film’s director.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact-me" class="text-center py-8 text-gray-400">
+      <h2 class="text-3xl md:text-5xl font-bold mb-8">Contact Me</h2>
+      <div class="flex justify-center items-center flex-wrap gap-8">
+        <a href="mailto:tofigahmadzada@gmail.com" class="flex flex-col items-center gap-2 text-white hover:text-green-400 transition-colors">
+          <img src="mail.png" alt="Gmail logo" class="w-16 h-16 rounded-full border-2 border-white p-2">
+          <span class="text-sm font-semibold">Gmail</span>
+        </a>
+        <a href="https://www.upwork.com/freelancers/~010323041efe13ddd7" class="flex flex-col items-center gap-2 text-white hover:text-green-400 transition-colors">
+          <img src="upwork-1.svg" alt="Upwork logo" class="w-16 h-16 rounded-full border-2 border-white p-2">
+          <span class="text-sm font-semibold">Upwork</span>
+        </a>
+        <a href="https://www.linkedin.com/in/tofig-ahmadzada-bba566357/" class="flex flex-col items-center gap-2 text-white hover:text-green-400 transition-colors">
+          <img src="linkedin.png" alt="LinkedIn logo" class="w-16 h-16 rounded-full border-2 border-white p-2">
+          <span class="text-sm font-semibold">LinkedIn</span>
+        </a>
+      </div>
+      <p class="mt-8">
+        &copy; <a href="https://github.com/krk2183" id="credits-text" class="hover:underline hover:text-white transition-colors">
+          
+        </a>.
+      </p>
+    </footer>
+    
+    <div class="bottom-nav">
+      <a href="#intro" class="bottom-nav-link">Intro</a>
+      <a href="#skills-section" class="bottom-nav-link">Skills</a>
+      <a href="#project-1" class="bottom-nav-link">Project 1</a>
+      <a href="#project-2" class="bottom-nav-link">Project 2</a>
+      <a href="#project-3" class="bottom-nav-link">Project 3</a>
+      <a href="#project-4" class="bottom-nav-link">Project 4</a>
+      <a href="#contact-me" class="bottom-nav-link">Contact Me</a>
+    </div>
+    </div>
+
+  <script src="backend.js">
+
+  </script>
+</body>
+</html>

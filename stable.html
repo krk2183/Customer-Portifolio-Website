@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiedemann-Inspired Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-zinc-900 text-gray-100 font-sans">
+
+    <div id="loading-screen">
+        <div class="film-box">
+            <div class="circle circle1"></div>
+            <div class="circle circle2"></div>
+            <div class="niddle"></div>
+        </div>
+        <h1 id="countdown-number">3</h1>
+        <button id="skip-button" class="vintage-button">Skip</button>
+    </div>
+    
+    <div id="main-content" class="main-content">
+        <header class="fixed top-0 left-0 w-full p-6 z-10">
+            <nav class="flex justify-between items-center container-content">
+                <a href="#" class="logo">T.A.</a>
+                <div class="space-x-4 uppercase text-sm">
+                    <a href="#" class="hover:text-gray-400">Work</a>
+                    <a href="#" class="hover:text-gray-400">About</a>
+                    <a href="#" class="hover:text-gray-400">Contact</a>
+                </div>
+            </nav>
+        </header>
+
+        <div id="hero-container">
+            <h1 id="main-name">Tofiq Ahmadzada</h1>
+            <div class="parallax-item" id="item-1">KRK2183</div>
+            <div class="parallax-item" id="item-2">KRK2183</div>
+            <div class="parallax-item" id="item-3">KRK2183</div>
+            <div class="parallax-item" id="item-4">KRK2183</div>
+            <div class="parallax-item" id="item-5">KRK2183</div>
+            <div class="parallax-item" id="item-6">KRK2183</div>
+        </div>
+
+        <section id="intro" class="h-[80vh] flex items-center justify-start p-4 md:p-8 relative overflow-hidden">
+            <div class="container-content flex items-center justify-start flex-col md:flex-row w-full">
+                <h1 id="hero-text" class="minmal parallax-text text-5xl md:text-8xl font-black uppercase tracking-tight leading-none text-zinc-700 md:text-left md:w-1/2">
+                    Minimalist
+                    <br>
+                    Design
+                </h1>
+                <div id="hero-image-container" class="w-full md:w-1/2 p-4 mt-8 md:mt-0 rounded-lg shadow-2xl">
+                    </div>
+            </div>
+        </section>
+
+        <main class="container-content">
+            <section id="project-1" class="content-section">
+                <div class="md:w-1/2 p-4">
+                    <img src="https://placehold.co/800x600/1e1e1e/d4d4d4?text=Project+1" alt="Placeholder image for Project 1" class="rounded-lg shadow-lg">
+                </div>
+                <div class="md:w-1/2 p-4 mt-8 md:mt-0">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4">A New Perspective</h2>
+                    <p class="text-gray-400 leading-relaxed">
+                        This website is a single-file creation that uses modern web technologies to create an immersive and elegant user experience. The design is inspired by portfolio sites that prioritize clean typography, subtle animations, and a focus on showcasing content. The use of a simple parallax effect adds a dynamic touch to the hero section.
+                    </p>
+                </div>
+            </section>
+
+            <section id="project-2" class="content-section reverse">
+                <div class="md:w-1/2 p-4">
+                    <img src="https://placehold.co/800x600/1e1e1e/d4d4d4?text=Project+2" alt="Placeholder image for Project 2" class="rounded-lg shadow-lg">
+                </div>
+                <div class="md:w-1/2 p-4 mt-8 md:mt-0">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4">Seamless Experience</h2>
+                    <p class="text-gray-400 leading-relaxed">
+                        The layout is fully responsive, ensuring the site looks great on desktops, tablets, and mobile devices. The content sections adapt fluidly using Tailwind's Flexbox utilities, providing a consistent and professional look no matter the screen size. The minimalist color palette helps the content stand out.
+                    </p>
+                </div>
+            </section>
+
+            <section id="project-3" class="content-section">
+                <div class="md:w-1/2 p-4">
+                    <img src="https://placehold.co/800x600/1e1e1e/d4d4d4?text=Project+3" alt="Placeholder image for Project 3" class="rounded-lg shadow-lg">
+                </div>
+                <div class="md:w-1/2 p-4 mt-8 md:mt-0">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4">Focus on Content</h2>
+                    <p class="text-gray-400 leading-relaxed">
+                        By keeping the design simple and focused, we draw attention to the most important elements: your work. The animations are subtle and non-intrusive, enhancing the user experience rather than distracting from it. This approach is ideal for artists, designers, and creatives looking to build a compelling online portfolio.
+                    </p>
+                </div>
+            </section>
+
+            <section id="project-4" class="content-section reverse">
+                <div class="md:w-1/2 p-4">
+                    <img src="https://placehold.co/800x600/1e1e1e/d4d4d4?text=Project+4" alt="Placeholder image for Project 4" class="rounded-lg shadow-lg">
+                </div>
+                <div class="md:w-1/2 p-4 mt-8 md:mt-0">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4">Crafting Stories</h2>
+                    <p class="text-gray-400 leading-relaxed">
+                        Every project tells a story. This section highlights the process of turning ideas into reality, from initial sketches and wireframes to the final polished product. The goal is to showcase not just the final outcome but the journey of creation.
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <footer id="contact-me" class="text-center py-8 text-gray-400">
+            <h2 class="text-3xl md:text-5xl font-bold mb-8">Contact Me</h2>
+            <div class="flex justify-center items-center flex-wrap gap-8">
+                <div class="relative flex flex-col items-center gap-2">
+                    <button id="phone-button" class="flex flex-col items-center gap-2 text-white hover:text-green-400 transition-colors focus:outline-none" data-phone="+90 545 986 44 54">
+                        <img src="telephone.png" alt="Phone logo" class="w-16 h-16 rounded-full border-2 border-white p-2">
+                        <span class="text-sm font-semibold">Phone</span>
+                    </button>
+                    <div id="phone-popup" class="absolute bottom-full mb-4 w-40 p-2 bg-zinc-800 border-2 border-green-400 text-green-400 rounded-lg shadow-lg text-center opacity-0 scale-y-0 transition-all duration-300 transform-origin-bottom">
+                        <img src="telephone.png" alt="Phone logo" class="w-16 h-16 rounded-full border-2 border-white p-2 object-cover">
+                        +90 545 986 44 54
+                    </div>
+                </div>
+                <a href="mailto:tofigahmadzada@gmail.com" class="flex flex-col items-center gap-2 text-white hover:text-green-400 transition-colors">
+                    <img src="mail.png" alt="Gmail logo" class="w-16 h-16 rounded-full border-2 border-white p-2">
+                    <span class="text-sm font-semibold">Gmail</span>
+                </a>
+                <a href="https://www.upwork.com/freelancers/~010323041efe13ddd7" class="flex flex-col items-center gap-2 text-white hover:text-green-400 transition-colors">
+                    <img src="upwork-1.svg" alt="Upwork logo" class="w-16 h-16 rounded-full border-2 border-white p-2">
+                    <span class="text-sm font-semibold">Upwork</span>
+                </a>
+                <a href="https://www.linkedin.com/in/tofig-ahmadzada-bba566357/" class="flex flex-col items-center gap-2 text-white hover:text-green-400 transition-colors">
+                    <img src="linkedin.png" alt="LinkedIn logo" class="w-16 h-16 rounded-full border-2 border-white p-2">
+                    <span class="text-sm font-semibold">LinkedIn</span>
+                </a>
+            </div>
+            <p class="mt-8">
+                &copy;  
+                <a href="https://github.com/krk2183" id="credits-text" class="hover:underline hover:text-white transition-colors">
+                
+            </a>.
+    </p>
+        </footer>
+        
+        
+        <nav class="bottom-nav">
+            <a href="#intro" class="bottom-nav-link">Intro</a>
+            <a href="#project-1" class="bottom-nav-link">Project 1</a>
+            <a href="#project-2" class="bottom-nav-link">Project 2</a>
+            <a href="#project-3" class="bottom-nav-link">Project 3</a>
+            <a href="#project-4" class="bottom-nav-link">Project 4</a>
+            <a href="#contact-me" class="bottom-nav-link">Contact Me</a>
+        </nav>
+    </div>
+
+    <script src="backend.js">
+        
+    </script>
+</body>
+</html>
