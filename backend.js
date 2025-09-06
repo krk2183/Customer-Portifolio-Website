@@ -153,6 +153,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 creditstext.innerHTML = year+' krk2183 All rights reserved.'
 
+
+                
+
                 window.addEventListener('scroll', handleScroll);
                 window.addEventListener('DOMContentLoaded', handleScroll);
 
@@ -173,6 +176,6 @@ document.addEventListener('DOMContentLoaded', () => {
                             console.error('Could not copy text: ', err);
                         });
                     });
-                }
-            }
+                };
+            };
         });
