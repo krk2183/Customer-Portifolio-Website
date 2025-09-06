@@ -122,7 +122,7 @@
             color: #FAF9F6;
             text-shadow: 0 0 10px #FAF9F6;
         }
-        .main-content {
+        #content {
             opacity: 0;
             transform: scale(0.9);
             transition: opacity 0.5s ease, transform 0.5s ease;
@@ -275,7 +275,7 @@
             background-color: transparent;
         }
         
-        #main-content a {
+        #main-content.main a {
             pointer-events: all;
         }
         #more-than-a {
@@ -356,29 +356,28 @@
                 transition: all 0.5s ease;
                 cursor: pointer;
                 position: relative;
-                overflow: hidden; /* This is important to hide the overflowing text initially */
+                overflow: hidden;
             }
 
-            .skill-box:hover {
+            /* This is the new class for the expanded state */
+            .skill-box.expanded {
                 background: #27272a;
                 font-size: 3rem;
                 padding-left: 3rem;
             }
 
-            .skill-box .skill-details {
-                display: block; /* Ensures the div takes up space */
-                font-size: 1rem;
-                font-weight: normal;
-                margin-top: 0.5rem;
-                opacity: 0;
-                max-height: 0; /* Hides the content by collapsing its height */
+            .skill-details {
+                padding: 0 2rem;
+                max-height: 0;
                 overflow: hidden;
-                transition: all 0.5s ease;
+                opacity: 0;
+                transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out, opacity 0.5s ease-in-out;
             }
 
-            .skill-box:hover .skill-details {
+            /* This is the new class for the expanded state */
+            .skill-box.expanded .skill-details {
                 opacity: 1;
-                max-height: 200px; /* Expands the content on hover */
+                max-height: 200px;
             }
 
             .my-skills {
@@ -394,8 +393,64 @@
                 text-align: center;
                 font-size: 6rem;
                 font-weight: bold;
-
                 margin-bottom: 8rem;
                 color: white;
                 font-family: 'Biheastra', serif;
+            }
+
+
+            .about-me-section {
+                margin-top: 40rem;
+                padding: 4rem 1rem;
+                text-align: center;
+                margin-bottom: 30rem;
+            }
+
+            .about-me-headline {
+                margin-top: 20rem;
+                font-size: 4.5rem;
+                font-weight: 900;
+                text-transform: uppercase;
+                letter-spacing: -0.025em;
+                line-height: 1;
+                color: #a1a1aa;
+            }
+
+            @media (min-width: 768px) {
+            .about-me-headline {
+                    font-size: 6rem;
+            }
+            }
+
+            .p-element {
+                margin-top: 2rem;
+                font-size: 1.25rem;
+                color: #9ca3af;
+                max-width: 56rem;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            @media (min-width: 768px) {
+            .p-element {
+                font-size: 1.5rem;
+            }
+            }
+
+            .about-me-section-extra {
+                margin-top: 7rem;
+                padding: 4rem 1rem;
+                text-align: center;
+                margin-bottom: 15rem;
+                position: relative;
+                z-index: 1;
+            }
+
+            .p-element-extra {
+                margin-top: 2rem;
+                font-size: 1.25rem;
+                color: #9ca3af;
+                max-width: 56rem;
+                margin-left: auto;
+                margin-right: auto;
             }
